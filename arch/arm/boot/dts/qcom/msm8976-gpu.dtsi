@@ -135,7 +135,7 @@
 		qcom,gpu-speed-config@0 {
 			compatible = "gpu-speed-config@0";
 
-			qcom,initial-pwrlevel = <5>;
+			qcom,initial-pwrlevel = <6>;
 
 			/* Power levels */
 			qcom,gpu-pwrlevels {
@@ -198,8 +198,16 @@
 					qcom,bus-max = <5>;
 				};
 
-				qcom,gpu-pwrlevel@6 {
-					reg = <6>;
+                                qcom,gpu-pwrlevel@6 {
+                                        reg = <6>;
+                                        qcom,gpu-freq = <133333333>;
+                                        qcom,bus-freq = <3>;
+                                        qcom,bus-min = <3>;
+                                        qcom,bus-max = <4>;
+                                };
+
+				qcom,gpu-pwrlevel@7 {
+					reg = <7>;
 					qcom,gpu-freq = <19200000>;
 					qcom,bus-freq = <0>;
 					qcom,bus-min = <0>;
@@ -282,7 +290,15 @@
 				};
 
 				qcom,gpu-pwrlevel@7 {
-					reg = <7>;
+                                        reg = <7>;
+                                        qcom,gpu-freq = <13333333>;
+                                        qcom,bus-freq = <3>;
+                                        qcom,bus-min = <3>;
+                                        qcom,bus-max = <4>;
+                                };
+
+				qcom,gpu-pwrlevel@8 {
+					reg = <8>;
 					qcom,gpu-freq = <19200000>;
 					qcom,bus-freq = <0>;
 					qcom,bus-min = <0>;
